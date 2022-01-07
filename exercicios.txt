@@ -1,0 +1,77 @@
+''' Exercício 1: Criar um objeto do tipo Poligono com os pontos
+(1,1)(3,1)(3,3)(1,3)(1,1), na sequência:
+a) Imprimir na tela os pontos desse polígono;
+b) Imprimir o perímetro do polígono;
+c) Imprimir o centroide do polígono;
+d) Obter o bounding box do polígono e imprimir na tela.
+Observações:
+• O seu programa deverá estar no módulo principal.py;
+• Será necessário importar as classes do módulo codigo.py.
+'''
+
+from aula.codigo import *
+
+x = Poligono()
+
+x.add(Ponto(1, 1))
+x.add(Ponto(3, 1))
+x.add(Ponto(3, 3))
+x.add(Ponto(1, 3))
+x.add(Ponto(1, 1))
+
+x.print()
+print(x.perimeter())
+print(x.centroid().toString())
+x.bbox().print()
+
+
+''' Exercício 2: Criar um objeto do tipo Retangulo com os pontos
+(1,1)(3,3), na sequência:
+a) Imprimir na tela os pontos que compõem o retângulo;
+b) Imprimir o centroide;
+c) Obter o retângulo no formato de um polígono e imprimir na tela os
+pontos do polígono e o perímetro desse polígono.
+'''
+
+from aula.codigo import *
+
+r = Retangulo(Ponto(1, 1), Ponto(3, 3))
+
+r.print()
+print(r.centroid().toString())
+r.toPoligono().print()
+print(r.toPoligono().perimeter())
+
+
+
+''' Exercicio 3: Criar um objeto do tipo Linha com os pontos
+(1,1)(3,1)(3,3)(1,3), na sequência:
+a) Imprimir na tela os pontos dessa linha;
+b) Imprimir o comprimento da linha.
+'''
+
+from aula.codigo import *
+
+l = Linha()
+
+l.add(Ponto(1, 1))
+l.add(Ponto(3, 1))
+l.add(Ponto(3, 3))
+l.add(Ponto(1, 3))
+l.add(Ponto(1, 1))
+
+l.print()
+print(l.length())
+
+''' Exercicio 4: Criar dois pontos com as coordenadas (1,3) e (4,2). 
+Na sequência imprimir na tela a distância entre esses dois pontos.
+'''
+
+from aula.codigo import *
+
+a = Ponto(1, 3)
+b = Ponto(4, 2)
+
+print(a.distancia(b))
+
+
